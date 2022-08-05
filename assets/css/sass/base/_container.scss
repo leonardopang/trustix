@@ -1,0 +1,11 @@
+.container-wrap {
+  padding: 1rem;
+}
+
+@media(min-width: $media-query-desktop ) {
+  .container-wrap {
+    width: 1216px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
