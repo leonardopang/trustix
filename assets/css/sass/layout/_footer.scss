@@ -1,0 +1,62 @@
+.footer {
+  margin-top: 4rem;
+}
+
+.footer-top_container {
+  gap: 2rem;
+}
+
+.footer--item {
+  .logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 248px;
+  }
+
+  .redes-sociais_container {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 248px;
+  }
+
+  .title-container {
+    margin-bottom: 13px;
+
+    h5 {
+      color: #14142B;
+      letter-spacing: 0.75px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 2rem 0 1.625rem;
+
+  .copy-right {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    color: #A0A3BD;
+  }
+}
+
+@media(min-width: $media-query-notebook) {
+  .footer-top_container {
+    gap: 4rem;
+    grid-template-columns: 1fr repeat(3, 156px);
+  }
+
+  .footer-bottom {
+    padding: 4rem 0 1.625rem;
+  }
+
+}

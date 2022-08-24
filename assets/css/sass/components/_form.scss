@@ -1,0 +1,170 @@
+.form-template {
+  br {
+    display: none;
+  }
+
+  span.wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    background: #EFF0F7;
+    border-radius: 16px;
+    border: none;
+    color: #14142B;
+    border: 2px solid transparent;
+    font-size: 13px;
+    display: block;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 400;
+    box-sizing: border-box;
+
+    ::placeholder {
+      color: #6E7191;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    :focus {
+      border-color: #14142B;
+    }
+
+    &.wpcf7-not-valid {
+      background-color: #FFECFC;
+      border-color: #CA024F;
+    }
+  }
+
+  .two-inputs {
+    margin-bottom: 30px;
+  }
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  .button-step-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 40px;
+
+    .steps-itens {
+      display: flex;
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+
+      .step--item {
+        background-color: #D9D9D9;
+        color: $Grayscale-body;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color .5s ease, color .5s ease;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -33px;
+          transform: translateY(-50%);
+          background-color: #D9D9D9;
+          height: 6px;
+          width: 2.5rem;
+          z-index: -1;
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+
+        &.form-complete,
+        &:hover {
+          background-color: #27AF00;
+          color: $Off-white;
+        }
+      }
+    }
+
+    .button-form-steps {
+      background-color: #BCFAA1;
+      border-color: #BCFAA1;
+      color: #27AF00;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 22px;
+      letter-spacing: 0.25px;
+      padding: 9px 23.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        background-image: url('../../assets/images/svg/icon-arrow-right-green.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 13px;
+        height: 13px;
+        position: relative;
+        margin-left: 3px;
+        display: inline-block;
+        transition: transform .5s ease;
+      }
+
+      &:hover {
+        &:after {
+          transform: translateX(.5rem);
+        }
+      }
+    }
+  }
+
+}
+
+.step-container {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+@media (min-width: $media-query-notebook) {
+
+  .form-template {
+    .two-inputs {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      span {
+        margin: 0;
+      }
+    }
+  }
+
+}
