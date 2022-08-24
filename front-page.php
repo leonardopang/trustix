@@ -1,26 +1,8 @@
 <?php //Template name: Home 
+the_post();
 ?>
 <?php get_header(); ?>
 <main>
-  <section class="services">
-    <div class="container-wrap">
-    </div>
-  </section>
-  <section class="about-work">
-    <div class="container-wrap">
-    </div>
-  </section>
-  <section class="calling">
-    <div class="container-wrap">
-    </div>
-  </section>
-  <section class="testimonials">
-    <div class="container-wrap">
-    </div>
-  </section>
-  <section class="about-us">
-    <div class="container-wrap">
-    </div>
-  </section>
+  <?php the_content(); ?>
 </main>
 <?php get_footer(); ?>
