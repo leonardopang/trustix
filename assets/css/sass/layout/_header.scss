@@ -22,3 +22,12 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media(min-width: $media-query-desktop) {
+  .header-middle {
+
+    .container-wrap {
+      width: 1216px;
+    }
+  }
+}
