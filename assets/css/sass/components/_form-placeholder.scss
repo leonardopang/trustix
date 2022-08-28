@@ -1,0 +1,28 @@
+.placeholder {
+  position: relative;
+
+  .placeholder--text {
+    color: #6E7191;
+    font-size: 15px;
+    font-weight: 400;
+    position: absolute;
+    top: 33.6%;
+    left: 26px;
+    display: inline-block;
+    transition: top 0.5s ease, font-szie 0.4s ease;
+    pointer-events: none;
+  }
+
+  &.focus {
+    .placeholder--text {
+      font-size: 11px;
+      top: 15.2%;
+      transition: top 0.5s ease, font-szie 0.4s ease;
+    }
+  }
+
+  input {
+    padding: 1.5rem 1.5rem .8rem !important;
+  }
+
+}

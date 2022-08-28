@@ -4,10 +4,16 @@
 './base/container',
 './base/typhography';
 
+@import './components/form',
+'./components/form-placeholder',
+'./components/button';
+
 @import './layout/grid',
 './layout/header',
+'./layout/menu',
 './layout/menu-desk',
 './layout/menu-mobile',
+'./layout/menu-footer',
 './layout/footer';
 
 
