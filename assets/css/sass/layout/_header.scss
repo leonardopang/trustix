@@ -1,17 +1,17 @@
 .header {
-  min-height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $Off-white;
+  flex-wrap: wrap;
 }
 
-@media(min-width: 992px) {
+.header-middle {
+  width: 100%;
+}
 
-  .header-middle_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+.header-middle_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
