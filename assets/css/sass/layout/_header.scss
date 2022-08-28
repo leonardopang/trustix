@@ -1,9 +1,9 @@
 .header {
-  min-height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $Off-white;
+  flex-wrap: wrap;
 }
 
 .header-middle {

@@ -14,9 +14,29 @@
   }
 }
 
+.menu-mobile {
+  display: none;
+  padding: .5rem 0;
+
+  &.active {
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+}
+
 @media(min-width: $media-query-notebook) {
 
   .hamburguer-menu {
+    display: none;
+  }
+
+  .menu-mobile {
     display: none;
   }
 

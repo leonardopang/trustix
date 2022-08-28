@@ -39,6 +39,12 @@ $args_desk = array(
             <span class="bar"></span>
           </div>
         </div>
+
       </div>
     </div>
+    <nav class="menu-mobile">
+      <div class="container-wrap">
+        <?php wp_nav_menu($args_desk); ?>
+      </div>
+    </nav>
   </header>

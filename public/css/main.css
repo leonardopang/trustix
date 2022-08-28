@@ -345,7 +345,6 @@ svg {
   }
 }
 .header {
-  min-height: 92px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -353,6 +352,8 @@ svg {
   -ms-flex-pack: center;
       justify-content: center;
   background-color: #FCFCFC;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header-middle {
@@ -417,8 +418,29 @@ svg {
   background-color: #27AF00;
 }
 
+.menu-mobile {
+  display: none;
+  padding: 0.5rem 0;
+}
+
+.menu-mobile.active {
+  display: block;
+  width: 100%;
+}
+
+.menu-mobile .menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 0.5rem;
+}
+
 @media (min-width: 992px) {
   .hamburguer-menu {
+    display: none;
+  }
+  .menu-mobile {
     display: none;
   }
 }
