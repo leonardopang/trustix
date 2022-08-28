@@ -358,6 +358,15 @@ svg {
 
 .header-middle {
   width: 100%;
+  height: 92px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.header-middle .container-wrap {
+  width: 100%;
 }
 
 .header-middle_container {
