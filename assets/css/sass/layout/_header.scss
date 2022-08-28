@@ -6,12 +6,12 @@
   background-color: $Off-white;
 }
 
-@media(min-width: 992px) {
+.header-middle {
+  width: 100%;
+}
 
-  .header-middle_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+.header-middle_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

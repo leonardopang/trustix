@@ -33,6 +33,11 @@ $args_desk = array(
           <nav class="menu-desk">
             <?php wp_nav_menu($args_desk); ?>
           </nav>
+          <div class="hamburguer-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </div>
       </div>
     </div>

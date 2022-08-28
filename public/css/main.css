@@ -355,16 +355,19 @@ svg {
   background-color: #FCFCFC;
 }
 
-@media (min-width: 992px) {
-  .header-middle_container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-  }
+.header-middle {
+  width: 100%;
 }
+
+.header-middle_container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
 .menu .menu-item a {
   font-size: 15px;
   color: #27AF00;
@@ -394,6 +397,31 @@ svg {
   gap: 2rem;
 }
 
+.hamburguer-menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 4px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 21px;
+  cursor: pointer;
+}
+
+.hamburguer-menu .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #27AF00;
+}
+
+@media (min-width: 992px) {
+  .hamburguer-menu {
+    display: none;
+  }
+}
 .footer-menu .menu-item a {
   color: #4E4B66;
   text-decoration: none;

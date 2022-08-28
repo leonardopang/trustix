@@ -1,0 +1,23 @@
+.hamburguer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  cursor: pointer;
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #27AF00;
+  }
+}
+
+@media(min-width: $media-query-notebook) {
+
+  .hamburguer-menu {
+    display: none;
+  }
+
+}
