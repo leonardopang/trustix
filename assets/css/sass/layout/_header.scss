@@ -8,10 +8,26 @@
 
 .header-middle {
   width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+
+  .container-wrap {
+    width: 100%;
+  }
 }
 
 .header-middle_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media(min-width: $media-query-desktop) {
+  .header-middle {
+
+    .container-wrap {
+      width: 1216px;
+    }
+  }
 }
