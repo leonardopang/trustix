@@ -155,7 +155,6 @@ svg {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  cursor: pointer;
   transition: background-color 0.5s ease, color 0.5s ease;
   position: relative;
 }
@@ -176,7 +175,7 @@ svg {
   display: none;
 }
 
-.form-template .button-step-form .steps-itens .step--item.form-complete, .form-template .button-step-form .steps-itens .step--item:hover {
+.form-template .button-step-form .steps-itens .step--item.form-complete {
   background-color: #27AF00;
   color: #FCFCFC;
 }
@@ -217,6 +216,13 @@ svg {
   transform: translateX(0.5rem);
 }
 
+.form-template .radio-container {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-left: 0.3rem;
+}
+
 .step-container {
   display: none;
 }
@@ -246,7 +252,8 @@ svg {
   font-size: 15px;
   font-weight: 400;
   position: absolute;
-  top: 33.6%;
+  top: 50%;
+  transform: translateY(-50%);
   left: 26px;
   display: inline-block;
   transition: top 0.5s ease, font-szie 0.4s ease;
@@ -256,6 +263,7 @@ svg {
 .placeholder.focus .placeholder--text {
   font-size: 11px;
   top: 15.2%;
+  transform: translateY(0);
   transition: top 0.5s ease, font-szie 0.4s ease;
 }
 
@@ -305,6 +313,160 @@ svg {
   background: #BCFAA1;
   border-radius: 8px;
   border-color: #BCFAA1;
+}
+
+.tns-outer {
+  padding: 0 !important;
+}
+
+.tns-outer [hidden] {
+  display: none !important;
+}
+
+.tns-outer [aria-controls],
+.tns-outer [data-action] {
+  cursor: pointer;
+}
+
+.tns-slider {
+  transition: all 0s;
+}
+
+.tns-slider > .tns-item {
+  box-sizing: border-box;
+}
+
+.tns-horizontal.tns-subpixel {
+  white-space: nowrap;
+}
+
+.tns-horizontal.tns-subpixel > .tns-item {
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+.tns-horizontal.tns-no-subpixel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tns-horizontal.tns-no-subpixel > .tns-item {
+  float: left;
+}
+
+.tns-horizontal.tns-carousel.tns-no-subpixel > .tns-item {
+  margin-right: -100%;
+}
+
+.tns-no-calc {
+  position: relative;
+  left: 0;
+}
+
+.tns-gallery {
+  position: relative;
+  left: 0;
+  min-height: 1px;
+}
+
+.tns-gallery > .tns-item {
+  position: absolute;
+  left: -100%;
+  transition: transform 0s, opacity 0s;
+}
+
+.tns-gallery > .tns-slide-active {
+  position: relative;
+  left: auto !important;
+}
+
+.tns-gallery > .tns-moving {
+  transition: all 0.25s;
+}
+
+.tns-autowidth {
+  display: inline-block;
+}
+
+.tns-lazy-img {
+  transition: opacity 0.6s;
+  opacity: 0.6;
+}
+
+.tns-lazy-img.tns-complete {
+  opacity: 1;
+}
+
+.tns-ah {
+  transition: height 0s;
+}
+
+.tns-ovh {
+  overflow: hidden;
+}
+
+.tns-visually-hidden {
+  position: absolute;
+  left: -10000em;
+}
+
+.tns-transparent {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tns-fadeIn {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  z-index: 0;
+}
+
+.tns-normal,
+.tns-fadeOut {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: -1;
+}
+
+.tns-vpfix {
+  white-space: nowrap;
+}
+
+.tns-vpfix > div,
+.tns-vpfix > li {
+  display: inline-block;
+}
+
+.tns-t-subp2 {
+  margin: 0 auto;
+  width: 310px;
+  position: relative;
+  height: 10px;
+  overflow: hidden;
+}
+
+.tns-t-ct {
+  width: 2333.3333333%;
+  width: -moz-calc(100% * 70 / 3);
+  width: 2333.3333333333%;
+  position: absolute;
+  right: 0;
+}
+
+.tns-t-ct:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tns-t-ct > div {
+  width: 1.4285714%;
+  width: -moz-calc(100% / 70);
+  width: 1.4285714286%;
+  height: 10px;
+  float: left;
 }
 
 .grid {

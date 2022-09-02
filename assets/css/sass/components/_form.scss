@@ -77,7 +77,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
         transition: background-color .5s ease, color .5s ease;
         position: relative;
 
@@ -99,8 +98,7 @@
           }
         }
 
-        &.form-complete,
-        &:hover {
+        &.form-complete {
           background-color: #27AF00;
           color: $Off-white;
         }
@@ -141,6 +139,12 @@
         }
       }
     }
+  }
+
+  .radio-container {
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding-left: 0.3rem;
   }
 
 }
