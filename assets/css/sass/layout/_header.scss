@@ -23,6 +23,24 @@
   justify-content: space-between;
 }
 
+.header-middle_container {
+  .logo-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media(min-width: 996px) {
+  .header-middle_container {
+    .logo-container {
+      position: relative;
+      left: auto;
+      transform: translateX(0);
+    }
+  }
+}
+
 @media(min-width: $media-query-desktop) {
   .header-middle {
 
