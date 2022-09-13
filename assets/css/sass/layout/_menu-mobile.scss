@@ -16,7 +16,11 @@
 
 .menu-mobile {
   display: none;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  background: #FCFCFC;
+  top: 92px;
+  z-index: 9;
 
   &.active {
     display: block;

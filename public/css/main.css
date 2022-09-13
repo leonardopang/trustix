@@ -597,6 +597,10 @@ svg {
 .menu-mobile {
   display: none;
   padding: 0.5rem 0;
+  position: absolute;
+  background: #FCFCFC;
+  top: 92px;
+  z-index: 9;
 }
 
 .menu-mobile.active {
