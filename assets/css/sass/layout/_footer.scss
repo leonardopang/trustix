@@ -7,6 +7,10 @@
 }
 
 .footer--item {
+  &:first-child {
+    order: 5;
+  }
+
   .logo_container {
     display: flex;
     align-items: center;
@@ -53,6 +57,12 @@
   .footer-top_container {
     gap: 4rem;
     grid-template-columns: 1fr repeat(3, 156px);
+  }
+
+  .footer--item {
+    &:first-child {
+      order: 0;
+    }
   }
 
   .footer-bottom {

@@ -654,6 +654,11 @@ svg {
   gap: 2rem;
 }
 
+.footer--item:first-child {
+  -ms-flex-order: 5;
+      order: 5;
+}
+
 .footer--item .logo_container {
   display: -ms-flexbox;
   display: flex;
@@ -706,6 +711,10 @@ svg {
     gap: 4rem;
     -ms-grid-columns: 1fr (156px)[3];
         grid-template-columns: 1fr repeat(3, 156px);
+  }
+  .footer--item:first-child {
+    -ms-flex-order: 0;
+        order: 0;
   }
   .footer-bottom {
     padding: 4rem 0 1.625rem;
