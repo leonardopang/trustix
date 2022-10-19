@@ -1,0 +1,31 @@
+.widget-social {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.widget-social--item {
+  width: 51px;
+  height: 51px;
+  background-color: #27AF00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 72px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(.9);
+  }
+}
+
+@media(min-width: 1024px) {
+  .widget-social {
+    right: 2rem;
+  }
+
+}

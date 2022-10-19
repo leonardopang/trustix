@@ -66,6 +66,10 @@
     </div>
   </footer>
   </body>
+  <div class="widget-social">
+    <a href="" class="widget-social--item"><?php get_svg('icon-widget-whatsapp') ?></a>
+    <a href="" class="widget-social--item"><?php get_svg('icon-widget-chat') ?></a>
+  </div>
   <?php wp_footer(); ?>
   <script src="<?= get_template_directory_uri() ?>/public/js/app.js"></script>
 

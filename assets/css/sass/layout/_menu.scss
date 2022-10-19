@@ -1,16 +1,46 @@
 .menu {
   .menu-item {
+    position: relative;
+
     a {
       font-size: 15px;
       color: #27AF00;
       font-weight: 700;
       line-height: 24px;
       letter-spacing: 0.75px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: #27AF00;
+        transition: width .1s ease;
+        border-radius: 26px;
+      }
+
+      &.current-menu-item {
+        a {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
     }
 
-    &.current-menu-item {
+
+
+    &:hover {
+
       a {
-        text-decoration: underline;
+        text-decoration: none;
+
+        &:after {
+          transition: width .5s ease;
+          width: 100%;
+        }
       }
     }
   }

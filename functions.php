@@ -1,4 +1,5 @@
 <?php
+define('PATHS_SVG', TEMPLATEPATH . '/assets/images/svg');
 
 function dp8_theme_support()
 {
@@ -23,3 +24,8 @@ function dp8_reset_header()
   remove_action('admin_print_styles', 'print_emoji_styles');
 }
 add_action('after_setup_theme', 'dp8_reset_header');
+
+function get_svg($name)
+{
+  return require(PATHS_SVG . '/' . $name . '.svg');
+}
