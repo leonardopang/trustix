@@ -69,7 +69,8 @@ svg {
 
 .form-template input[type=text],
 .form-template input[type=email],
-.form-template input[type=tel] {
+.form-template input[type=tel],
+.form-template textarea {
   background: #EFF0F7;
   border-radius: 16px;
   border: none;
@@ -86,7 +87,8 @@ svg {
 
 .form-template input[type=text] :-ms-input-placeholder,
 .form-template input[type=email] :-ms-input-placeholder,
-.form-template input[type=tel] :-ms-input-placeholder {
+.form-template input[type=tel] :-ms-input-placeholder,
+.form-template textarea :-ms-input-placeholder {
   color: #6E7191;
   font-size: 15px;
   font-weight: 400;
@@ -94,7 +96,8 @@ svg {
 
 .form-template input[type=text] ::placeholder,
 .form-template input[type=email] ::placeholder,
-.form-template input[type=tel] ::placeholder {
+.form-template input[type=tel] ::placeholder,
+.form-template textarea ::placeholder {
   color: #6E7191;
   font-size: 15px;
   font-weight: 400;
@@ -102,13 +105,15 @@ svg {
 
 .form-template input[type=text] :focus,
 .form-template input[type=email] :focus,
-.form-template input[type=tel] :focus {
+.form-template input[type=tel] :focus,
+.form-template textarea :focus {
   border-color: #14142B;
 }
 
 .form-template input[type=text].wpcf7-not-valid,
 .form-template input[type=email].wpcf7-not-valid,
-.form-template input[type=tel].wpcf7-not-valid {
+.form-template input[type=tel].wpcf7-not-valid,
+.form-template textarea.wpcf7-not-valid {
   background-color: #FFECFC;
   border-color: #CA024F;
 }
@@ -180,7 +185,43 @@ svg {
   color: #FCFCFC;
 }
 
-.form-template .button-step-form .button-form-steps {
+.form-template .button-form {
+  background-color: #BCFAA1;
+  border-color: #BCFAA1;
+  color: #27AF00;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  padding: 12px 32px;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.form-template .button-form:after {
+  content: "";
+  background-image: url("../../assets/images/svg/icon-arrow-right-green.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  margin-left: 3px;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.form-template .button-form:hover:after {
+  transform: translateX(0.5rem);
+}
+
+.form-template .button-form-steps {
   background-color: #BCFAA1;
   border-color: #BCFAA1;
   color: #27AF00;
@@ -198,7 +239,7 @@ svg {
       justify-content: center;
 }
 
-.form-template .button-step-form .button-form-steps:after {
+.form-template .button-form-steps:after {
   content: "";
   background-image: url("../../assets/images/svg/icon-arrow-right-green.svg");
   background-repeat: no-repeat;
@@ -212,7 +253,7 @@ svg {
   transition: transform 0.5s ease;
 }
 
-.form-template .button-step-form .button-form-steps:hover:after {
+.form-template .button-form-steps:hover:after {
   transform: translateX(0.5rem);
 }
 
@@ -231,7 +272,17 @@ svg {
   display: block;
 }
 
-@media (min-width: 992px) {
+.wpcf7-response-output {
+  border-radius: 16px;
+  padding: 1rem !important;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: #373737;
+  margin: 1.5rem 0 0 !important;
+}
+
+@media (min-width: 1024px) {
   .form-template .two-inputs {
     display: -ms-flexbox;
     display: flex;
@@ -252,7 +303,7 @@ svg {
   font-size: 15px;
   font-weight: 400;
   position: absolute;
-  top: 50%;
+  top: 28px;
   transform: translateY(-50%);
   left: 26px;
   display: inline-block;
@@ -262,13 +313,18 @@ svg {
 
 .placeholder.focus .placeholder--text {
   font-size: 11px;
-  top: 15.2%;
+  top: 8px;
   transform: translateY(0);
   transition: top 0.5s ease, font-szie 0.4s ease;
 }
 
-.placeholder input {
+.placeholder input,
+.placeholder textarea {
   padding: 1.5rem 1.5rem 0.8rem !important;
+}
+
+.form-contact .placeholder.focus .placeholder--text {
+  top: 1px;
 }
 
 .button {
@@ -779,6 +835,12 @@ svg {
   .widget-social {
     right: 2rem;
   }
+}
+.button-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
 }
 
 /*# sourceMappingURL=main.css.map*/
