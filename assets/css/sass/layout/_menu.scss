@@ -21,19 +21,15 @@
         border-radius: 26px;
       }
 
-      &.current-menu-item {
-        a {
-          &:after {
-            width: 100%;
-          }
-        }
+    }
+
+    &.current-menu-item {
+      a:after {
+        width: 100%;
       }
     }
 
-
-
     &:hover {
-
       a {
         text-decoration: none;
 
