@@ -63,6 +63,14 @@
     &:first-child {
       order: 0;
     }
+
+    .redes-sociais_container a {
+      transition: transform .5s ease;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
   }
 
   .footer-bottom {
