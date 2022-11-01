@@ -6,18 +6,25 @@
             <img src="<?= site_url() ?>/wp-content/uploads/logo-whith-description.svg" alt="Trustix">
           </div>
           <div class="redes-sociais_container">
-            <a href="" target="_blank">
-              <?= file_get_contents(get_template_directory_uri() . '/assets/images/svg/social-icon-grey-snap.svg'); ?>
-            </a>
-            <a href="" target="_blank">
-              <?= file_get_contents(get_template_directory_uri() . '/assets/images/svg/social-icon-grey-instagram.svg'); ?>
-            </a>
-            <a href="" target="_blank">
-              <?= file_get_contents(get_template_directory_uri() . '/assets/images/svg/social-icon-grey-tiktok.svg'); ?>
-            </a>
-            <a href="" target="_blank">
-              <?= file_get_contents(get_template_directory_uri() . '/assets/images/svg/social-icon-grey-facebook.svg'); ?>
-            </a>
+
+            <?php if (have_rows('redes_sociais_widget', 'opt-footer')) : ?>
+            <?php while (have_rows('redes_sociais_widget', 'opt-footer')) : ?>
+            <?php the_row(); ?>
+            <?php $selec_social = get_sub_field('select_social_media_widget'); ?>
+            <?php $link_social = get_sub_field('link_rede_social_widget'); ?>
+            <?php if ($selec_social === 'whatsapp') : ?>
+            <a href="<?= $link_social ?>" target="_blank"></a>
+            <?php elseif ($selec_social === 'facebook') : ?>
+            <a href="<?= $link_social ?>" target="_blank"><?php get_svg('social-icon-grey-facebook') ?></a>
+            <?php elseif ($selec_social === 'chat') : ?>
+            <a href="<?= $link_social ?>" target="_blank"></a>
+            <?php elseif ($selec_social === 'instagram') : ?>
+            <a href="<?= $link_social ?>" target="_blank"><?php get_svg('social-icon-grey-instagram') ?></a>
+            <?php elseif ($selec_social === 'linkedin') : ?>
+            <a href="<?= $link_social ?>" target="_blank"></a>
+            <?php endif; ?>
+            <?php endwhile; ?>
+            <?php endif; ?>
           </div>
         </div>
         <div class="footer--item">
@@ -67,8 +74,25 @@
   </footer>
   </body>
   <div class="widget-social">
-    <a href="" class="widget-social--item"><?php get_svg('icon-widget-whatsapp') ?></a>
-    <a href="" class="widget-social--item"><?php get_svg('icon-widget-chat') ?></a>
+    <?php if (have_rows('redes_sociais_widget', 'opt-social')) : ?>
+    <?php while (have_rows('redes_sociais_widget', 'opt-social')) : ?>
+    <?php the_row(); ?>
+    <?php $selec_social = get_sub_field('select_social_media_widget'); ?>
+    <?php $link_social = get_sub_field('link_rede_social_widget'); ?>
+    <?php if ($selec_social === 'whatsapp') : ?>
+    <a href="<?= $link_social ?>" target="_blank"
+      class="widget-social--item"><?php get_svg('icon-widget-whatsapp') ?></a>
+    <?php elseif ($selec_social === 'facebook') : ?>
+    <a href="<?= $link_social ?>" target="_blank" class="widget-social--item"></a>
+    <?php elseif ($selec_social === 'chat') : ?>
+    <a href="<?= $link_social ?>" target="_blank" class="widget-social--item"><?php get_svg('icon-widget-chat') ?></a>
+    <?php elseif ($selec_social === 'instagram') : ?>
+    <a href="<?= $link_social ?>" target="_blank" class="widget-social--item"></a>
+    <?php elseif ($selec_social === 'linkedin') : ?>
+    <a href="<?= $link_social ?>" target="_blank" class="widget-social--item"></a>
+    <?php endif; ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
   </div>
   <?php wp_footer(); ?>
   <script src="<?= get_template_directory_uri() ?>/public/js/app.js"></script>

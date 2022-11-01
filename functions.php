@@ -49,11 +49,30 @@ function sa_sanitize_spanish_chars($filename)
 
 add_filter('sanitize_file_name', 'sa_sanitize_spanish_chars', 10);
 
-function cc_mime_types($mimes)
-{
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', 'cc_mime_types');
-
 add_filter('wpcf7_autop_or_not', '__return_false'); //Remover criação de tag <p>
+
+function widget_registration($name, $id, $description, $beforeWidget, $afterWidget, $beforeTitle, $afterTitle)
+{
+  register_sidebar(array(
+    'name' => $name,
+    'id' => $id,
+    'description' => $description,
+    'before_widget' => $beforeWidget,
+    'after_widget' => $afterWidget,
+    'before_title' => $beforeTitle,
+    'after_title' => $afterTitle,
+  ));
+}
+
+function multiple_widget_init()
+{
+  widget_registration('Footer 1', 'footer-sidebar-1', '', '', '', '<div class="title-container"><h5>', '</h5></div>');
+  widget_registration('Footer 2', 'footer-sidebar-2', '', '', '', '<div class="title-container"><h5>', '</h5></div>');
+  widget_registration('Footer 3', 'footer-sidebar-3', '', '', '', '<div class="title-container"><h5>', '</h5></div>');
+  widget_registration('Footer Copyright', 'footer-copyright', '', '', '', '', '');
+  // ETC...
+}
+
+add_action('widgets_init', 'multiple_widget_init');
+
+include_once(TEMPLATEPATH . '/inc/options_page.php'); //Page Options Theme

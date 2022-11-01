@@ -27,7 +27,8 @@ $args_desk = array(
         <div class="header-middle_container">
           <div class="logo-container">
             <a href="<?= site_url() ?>">
-              <img src="<?= site_url() ?>/wp-content/uploads/logo.svg" alt="<?= bloginfo('title') ?>">
+              <!-- <img src="<?= site_url() ?>/wp-content/uploads/logo.svg" alt="<?= bloginfo('title') ?>"> -->
+              <img src="<?= the_field('desktop', 'opt-logo') ?>" alt="<?= bloginfo('title') ?>">
             </a>
           </div>
           <nav class="menu-desk">
